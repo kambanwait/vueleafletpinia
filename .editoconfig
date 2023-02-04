@@ -1,0 +1,23 @@
+# Declares that this is the top-level configuration
+root = true
+
+# Applies to all files
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+curly_bracket_next_line = false
+spaces_around_operators = true
+
+
+# Applies to JS and TS files
+[*.{js,ts}]
+quote_type = single
+
+# Applies to all Markdown files
+[*.md]
+insert_final_newline = false
+trim_trailing_whitespace = false

@@ -1,0 +1,42 @@
+{
+  "name": "vue-leaflet-pinia",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "testui": "vitest --ui",
+    "testci": "vitest --run"
+  },
+  "dependencies": {
+    "@geoman-io/leaflet-geoman-free": "^2.13.0",
+    "leaflet": "1.9.3",
+    "leaflet-event-forwarder": "^0.0.3",
+    "leaflet-measure": "^3.1.0",
+    "pinia": "^2.0.13",
+    "vue": "^3.2.25",
+    "vue-fontawesome": "^0.0.2",
+    "vue-jwt-decode": "^0.1.0",
+    "vue-router": "4"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.4",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vitest/coverage-c8": "^0.28.1",
+    "@vitest/ui": "^0.28.1",
+    "autoprefixer": "^10.4.8",
+    "daisyui": "^2.22.0",
+    "eslint": "^8.13.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^9.8.0",
+    "postcss": "^8.4.16",
+    "prettier": "2.8.1",
+    "tailwindcss": "^3.1.8",
+    "vite": "^4.0.0",
+    "vitest": "^0.28.1"
+  }
+}
