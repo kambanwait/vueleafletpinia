@@ -27,7 +27,7 @@ const setupMap = () => {
     fadeAnimation: true,
     zoomControl: false,
     minZoom: 5,
-  }).setView([51.509865, -0.118092], 5)
+  }).setView([51.509865, -0.118092], 10)
 
   mapStore.setSAMap(map)
 
