@@ -12,4 +12,6 @@
 - Close dev tools
 - Notice how app runs fine
 
-Looking in the console, you'll spot warnings and some errors around message length/violation and eventually when you keep clicking and adding loads more markers.
+Looking in the console, you'll spot warnings and some errors around message length/violation and eventually when you keep clicking and adding loads more markers:
+
+![Errors in console](./errors.png)
