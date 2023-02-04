@@ -1,10 +1,6 @@
-function getRandomType() {
-  return `LayerGroup${Math.floor(Math.random() * 10) + 1}`
-}
-
 export let mockMessage = {
   DataSourceIDs: null,
-  Type: getRandomType(),
+  Type: '',
   CorrelationGroupId: null,
   ID: '34721',
   DataSourceID: '226e3207-1d7f-11ed-ad56-00155d0a0d0d',
