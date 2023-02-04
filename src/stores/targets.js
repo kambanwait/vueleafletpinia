@@ -29,7 +29,15 @@ export const useTargetsStore = defineStore('targets-store', {
 
   actions: {
     sendMockObjectMessage() {
-      this.handleTargetPoint(mockMessage)
+      const newMessage = mockMessage
+
+      // provide a random layergroup number to Type
+      newMessage.Type = `LayerGroup${Math.floor(Math.random() * 10) + 1}`
+      newMessage.Shape.Points[0].LatInDegrees = this.getRandomCoords(51.28, 51.52)
+      newMessage.Shape.Points[0].LonInDegrees = this.getRandomCoords(-0.25, -0.11)
+      newMessage.ID = Math.random().toString().substr(2, 8)
+
+      this.handleTargetPoint(newMessage)
     },
 
     handleTargetPoint(point) {
@@ -72,7 +80,7 @@ export const useTargetsStore = defineStore('targets-store', {
           break
 
         case 'LayerGroup10':
-          this.handleStrobe(point, this.targetLayers.LayerGroup10)
+          this.handleTarget(point, this.targetLayers.LayerGroup10)
           break
 
         default:
@@ -187,7 +195,7 @@ export const useTargetsStore = defineStore('targets-store', {
     },
 
     getObject(objectID, objectType) {
-      switch (objectType.toLowerCase()) {
+      switch (objectType) {
         case 'LayerGroup1':
           return this.targetLayers.LayerGroup1.getLayers().find((object) => object.ID === objectID)
 
@@ -233,5 +241,9 @@ export const useTargetsStore = defineStore('targets-store', {
       // update found Object with new declaration state
       objectToUpdate[declaration] = state
     },
+
+    getRandomCoords(min, max) {
+      return Math.random() * (max - min) + min
+    }
   },
 })
